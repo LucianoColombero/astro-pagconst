@@ -1,0 +1,112 @@
+---
+
+
+---
+<style>
+  .swiper {
+	width: 100%;
+	height: 100vh;
+}
+
+.img-1 {
+	background-image: url("../assets/img/1.jpg");
+		
+}
+
+.img-2 {
+	background-image: url("../assets/img/2.jpg");
+		
+}
+
+.img-3 {
+	background-image: url("../assets/img/3.webp");
+}
+
+
+.swiper-slide {
+	background-size: cover;
+	background-position: center center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	color: #EEC643;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 3);
+}
+
+.text-container {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+}
+
+.swiper-pagination {
+	display: none;
+}
+
+.swiper-pagination-bullet {
+	background-color: white;
+	width: 16px;
+	height: 16px;
+}
+
+@media (max-width: 500px) {
+	.swiper-pagination {
+		display: block !important;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		display: none;
+	}
+}
+</style>
+<section id="jobs" class="w-full bg-blanco flex justify-center h-[20rem] lg:h-[40rem]">
+    <article class="flex flex-col justify-start w-full items-center">
+		<section>
+			<!-- <h1 class="text-4xl text-amarillo font-light tracking-wide p-4">Our Jobs</h1> -->
+		</section>
+        <div class="swiper text-white drop-shadow-2xl">
+          <!-- contenido de swiper -->
+          <div class="swiper-wrapper">
+                        <!-- slide 1-->
+            <div class="swiper-slide slide-1 slide-item img-1"></div>
+                        <!-- slide 2-->
+            <div class="swiper-slide slide-2 slide-item img-2"></div>
+                        <!-- slide 3-->
+            <div class="swiper-slide slide-3 slide-item img-3"></div>
+          </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+    </article>
+</section>
+<script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+  new Swiper(".swiper", {
+	direction: "horizontal",
+	loop: true,
+	effect: "fade",
+
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev"
+	},
+
+	autoplay: {
+		delay: 3000
+	},
+
+	pagination: {
+		el: ".swiper-pagination",
+		type: "bullets",
+		clickable: true
+	}
+});
+</script>

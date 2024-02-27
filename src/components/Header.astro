@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/img/logo.png';
+---
+
+<header>
+    <section class="flex justify-center w-full text-white sm:h-20 h-16">
+        <div class="w-3/4 flex md:justify-between justify-center items-center">
+            <div class="flex items-end gap-2">
+                <Image loading='eager' class="w-10 h-12 sm:w-14 sm:h-16" src={logo} alt="Logo de la empresa sistemas constructivos" />
+                <div class="flex flex-col">
+                    <h2 class="text-md sm:text-xl">Sistemas</h2>
+                    <h2 class="text-md sm:text-xl text-amarillo">Constructivos</h2>
+                </div>
+            </div>
+            <nav class="gap-x-6 hidden md:flex sm:text-base">
+                <a class="font-semibold transition ease-in-out hover:text-amarillo" href="#servicios">SERVICES</a>
+                <a class="font-semibold transition ease-in-out hover:text-amarillo" href="#about">ABOUT US</a>
+                <a class="font-semibold transition ease-in-out hover:text-amarillo" href="#jobs">OUR JOBS</a>
+                <a class="font-semibold transition ease-in-out hover:text-amarillo" href="#contact">CONTACT US</a>
+            </nav>
+        </div>
+    </section>
+    <section class="w-full bg-center bg-cover bg-no-repeat bg-[url('/src/assets/img/banner.png')] h-96 flex justify-center">
+        <article class="flex flex-col justify-center w-3/4 gap-5">
+          <h1 class="md:text-5xl text-3xl w-52 text-blanco md:w-80 font-semibold leading-tight">Making your vision become a reality</h1>
+          <p class="md:text-ms text-xs font-light text-blanco w-52 tracking-wide">ARCHITECTURAL DESIGN, GENERAL CONSTRUCTION AND INTERIOR DESIGN</p>
+          <a href="#contact" class="hover:bg-lime-600 hover:text-white bg-amarillo text-azul-h1 font-bold px-4 py-2 rounded-md w-48 h-10 text-center"><i class="fa-brands fa-whatsapp"></i> HIRE US</a>
+        </article>
+    </section>
+    <script>
+        // JavaScript para desplazamiento suave al hacer clic en enlaces del menú de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/5878ea84a0.js" crossorigin="anonymous"></script>
+</header>
+
+

@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/img/logo.png';
+---
+
+<section id= "contact" class="w-full bg-[url('/src/assets/img/bg-contactus.png')] bg-cover bg-center min-h-[800px] flex justify-center mt-2">
+    <article class="flex flex-col md:w-3/4 lg:w-3/4 h-full align-center items-center gap-4">
+            <h1 class="lg:text-5xl text-3xl text-blanco p-4 font-semibold leading-tight">Contact Us...</h1>
+            <div class="flex-col lg:flex lg:flex-row bg-negro-sombra w-4/5 lg:w-3/4 p-5 shadow-2xl rounded gap-4">
+                <fieldset class="flex flex-col lg:w-1/2 p-4">
+                    <form class="flex flex-col gap-2 mr-1 w-3/4 md:w-full lg:w-full text-blanco" action="https://formsubmit.co/3c1d2796d284abcf6e86e38f9bb9be2a" method="POST">
+                        <label class="font-semibold" for="name">Nombre</label>
+                        <input class="rounded p-1" type="text" name="name" id="name" placeholder="Tu nombre" required>
+                        <label class="font-semibold" for="email">Email</label>
+                        <input class="rounded p-1" type="email" name="email" id="email" placeholder="Tu email" required>
+                        <label class="font-semibold" for="message">Mensaje</label>
+                        <textarea class="rounded p-1" name="message" id="message" cols="30" rows="10" placeholder="Tu mensaje" required></textarea>
+                        <button class="mt-2 p-2 hover:bg-yellow-500 bg-amarillo text-azul-h1 rounded-sm font-semibold" type="submit"><i class="fa-solid fa-paper-plane fa-lg"></i> Enviar</button>
+                    </form>
+                </fieldset>
+                <div class="flex flex-col w-2/4 h-full p-4">
+                    <div class="flex flex-col h-full p-2 rounded gap-6">
+                        <h2 class="md:text-4xl text-2xl text-amarillo flex items-center font-light mb-4">Contact Information:</h2>
+                        <article class="lg:flex lg:flex-col flex lg:gap-9 gap-3 md:gap-4 mt-3 lg:items-start ">                         
+                            <h3 class="md:text-2xl text-xs text-center text-blanco"><i class="pb-[15px] lg:mr-2 fa-brands fa-square-whatsapp fa-2xl" style="color: #ffffff;"></i> Whatsapp</h3>
+                            <h3 class="md:text-2xl text-xs text-center text-blanco"><i class="pb-[15px] lg:mr-2 fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i> Facebook</h3>
+                            <h3 class="md:text-2xl text-xs text-center text-blanco"><i class="pb-[15px] lg:mr-2 fa-brands fa-square-instagram fa-2xl" style="color: #ffffff;"></i> Instagram</h3>
+                            <div class="border-t border-amarillo h-2 w-full mx-auto mt-4"></div>
+                        </article>
+                        <div class="lg:flex lg:flex-col flex-row lg:gap-3 gap-2 hidden">
+                            <h3 class="md:text-1xl text-blanco"><i class="mr-2 fa-solid fa-location-dot fa-xl" style="color: #ffffff;"></i> Villa Mercedes (S.L)</h3>
+                            <h3 class="md:text-1xl text-blanco"><i class="mr-2 fa-solid fa-square-envelope fa-xl" style="color: #ffffff;"></i>email@example.com</h3>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="w-3/4 h-full flex flex-col text-center justify-center items-center gap-3 pt-4 pb-4">
+                <Image class="h-14 lg:h-16 w-auto" src={logo} alt="Logo"></Image>
+                <h2 class="lg:text-5xl text-3xl font-light text-blanco tracking-wider"> Sistemas <span class="text-amarillo">Constructivos</span></h2>
+            </div>
+    </article>
+</section>
+
+<script src="https://kit.fontawesome.com/5878ea84a0.js" crossorigin="anonymous"></script>

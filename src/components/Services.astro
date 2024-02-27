@@ -1,0 +1,33 @@
+---
+console.log('javascript');
+import { Image } from 'astro:assets';
+import sillon from '../assets/img/sillon-card.png';
+import arq from '../assets/img/arq-card.png';
+import grua from '../assets/img/grua-card.png';
+---
+
+<div id="servicios" class="flex flex-row bg-azul-noche items-center justify-evenly min-h-96 p-4">
+    <section class="flex lg:flex-row flex-col bg-azul-noche items-center justify-evenly gap-10 w-3/4 pt-4 pb-4">
+        <article class="w-56 h-56 bg-negro-sombra flex flex-col items-center justify-center rounded">
+            <div class="flex flex-col items-center align-center justify-center gap-2">
+                <Image loading='eager' class='h-16 w-auto' src={arq} alt="Disenho interior"></Image>
+                <h3 class="text-blanco text-base font-semibold">ARCHITECTURAL DESIGN</h3>
+                <p class="text-blanco text-xs font-light text-center p-4">ARCHITECTURAL DESIGN, GENERAL CONSTRUCTION AND INTERIOR DESIGN</p>
+            </div>
+        </article>
+        <article class="w-56 h-56 bg-negro-sombra flex flex-col items-center justify-center rounded">
+            <div class="flex flex-col items-center align-center justify-center gap-2">
+                <Image loading='eager' class='h-16 w-auto' src={sillon} alt="Disenho interior"></Image>
+                <h3 class="text-blanco text-base font-semibold">INTERIOR DESIGN</h3>
+                <p class="text-blanco text-xs font-light text-center p-4">ARCHITECTURAL DESIGN, GENERAL CONSTRUCTION AND INTERIOR DESIGN</p>
+            </div>
+        </article>
+        <article class="w-56 h-56 bg-negro-sombra flex flex-col items-center justify-center rounded">
+            <div class="flex flex-col items-center align-center justify-center gap-2">
+                <Image loading='eager' class="h-16 w-auto" src={grua} alt="Disenho interior"></Image>
+                <h3 class="text-blanco text-base font-semibold">ARCHITECTURAL DESIGN</h3>
+                <p class="text-blanco text-xs font-light text-center p-4">ARCHITECTURAL DESIGN, GENERAL CONSTRUCTION AND INTERIOR DESIGN</p>
+            </div>
+        </article>
+    </section>
+</div>

@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import const3d from '../assets/img/const3dd.jpg';
+import avatar from '../assets/img/avatar.png';
+import firma from '../assets/img/firma.png';
+---
+
+<section id="about" class="w-full bg-cover min-h-[500px] bg-[url('/src/assets/img/About-us.png')] flex justify-center">
+    <article class="flex md:flex-row flex-col md:justify-between w-3/4 items-center gap-3 pt-6 pb-6">
+        <div class="flex md:w-1/2">
+            <Image class="lg:max-w-[423px] lg:max-h-[415px] rounded shadow-xl" src={const3d} alt="casa en 3d"></Image>
+        </div>
+        <div class="flex md:w-1/2">
+            <section class="flex flex-col justify-evenly gap-2">
+                <div class="flex flex-col p-4 gap-1">
+                    <h2 class="md:text-5xl text-2xl font-bold text-azul-h1 tracking-wider">Construcción Company <span class= "text-amarillo tracking-wider "><br>With Strategy</span></h2>
+                    <p class="md:text-base text-sm pr-3 mt-3">Aenean mattis, elit ac bibendum varius, velit massa vestibulum enim, in hendrerit ante lacus sit amet metus. Praesent consectetur congue tellus, a blandit ligula maximus sit amet. Mauris sem lacus, bibendum nec luctus ut, fermentum volutpat ligula. Ut ac pharetra velit, at volutpat eros. Curabitur pharetra urna at velit mollis tempus. Sed finibus massa enim. Aliquam imperdiet ex et ante convallis, ac convallis arcu facilis</p>
+                </div>
+                <div class="flex items-center justify-between md:w-3/4 gap-2 ">
+                   <div class="flex gap-4 w-3/4 p-2">
+                        <div>
+                            <Image class='md:h-16 w-auto' src={avatar} alt="Avatar del CEO"></Image>
+                        </div>
+                        <div class="flex flex-col align-center justify-center w-1/2">
+                            <h2 class="md:text-2xl font-bold text-azul-h1">Eufesio Montana</h2>
+                            <p class="md:text-base text-sm">CEO</p>
+                        </div>
+                   </div>
+                    <div class="w-1/4">
+                        <Image class='h-18 w-auto' src={firma} alt="Firma del CEO"></Image>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+</section>
